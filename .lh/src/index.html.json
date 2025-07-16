@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 2,
+            "activePatchIndex": 3,
             "patches": [
                 {
                     "date": 1752690299465,
@@ -16,6 +16,10 @@
                 {
                     "date": 1752691393150,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,10 @@\n <html lang=\"en\">\n   <head>\n     <meta charset=\"utf-8\" />\n     <title>My First Parcel App</title>\n-    <link rel=\"stylesheet\" href=\"src/styles.css\" />\n-    <script type=\"module\" src=\"src/app.js\"></script>\n+    <link rel=\"stylesheet\" href=\"/styles.css\" />\n+    <script type=\"module\" src=\"./app.js\"></script>\n   </head>\n   <body class=\"container mx-auto bg-slate-300\">\n     <h1 class=\"text-2xl text-center\">My favourite locations</h1>\n     <div id=\"map\" class=\"h-[80vh]\"></div>\n"
+                },
+                {
+                    "date": 1752691585893,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n <html lang=\"en\">\n   <head>\n     <meta charset=\"utf-8\" />\n     <title>My First Parcel App</title>\n-    <link rel=\"stylesheet\" href=\"./styles.css\" />\n+    <link rel=\"stylesheet\" href=\"./index.css\" />\n     <script type=\"module\" src=\"./app.js\"></script>\n   </head>\n   <body class=\"container mx-auto bg-slate-300\">\n     <h1 class=\"text-2xl text-center\">My favourite locations</h1>\n"
                 }
             ],
             "date": 1752690299465,

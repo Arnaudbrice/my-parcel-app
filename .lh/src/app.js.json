@@ -1,0 +1,70 @@
+{
+    "sourceFile": "src/app.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 13,
+            "patches": [
+                {
+                    "date": 1752668203908,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1752668244890,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,18 @@\n import * as Leaflet from \"leaflet\";\n \n console.log(Leaflet);\n+import Leaflet from \"leaflet\"; // import everything from leaflet\n+import \"leaflet/dist/leaflet.css\"; // import leaflet css\n+\n+const WBS = [52.457131, 13.54007]; // WBS coordinates\n+const map = Leaflet.map(\"map\").setView(WBS, 13); // create a map object with a center and zoom level\n+const markerIcon = Leaflet.icon({\n+  iconUrl: \"https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png\",\n+  iconAnchor: [10, 20]\n+}); // There was an issue with the default marker icon, so we create a new one\n+Leaflet.marker(WBS, { icon: markerIcon }).addTo(map); // add a marker to the map at the WBS coordinates\n+\n+Leaflet.tileLayer(\"https://tile.openstreetmap.org/{z}/{x}/{y}.png\", {\n+  maxZoom: 19,\n+  attribution: '&copy; <a href=\"https://google.com\" target=\"_blank\">Google</a>'\n+}).addTo(map); // add a tile layer to the map, the tiles are those images that make up the map\n"
+                },
+                {
+                    "date": 1752668265765,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,8 @@\n-import * as Leaflet from \"leaflet\";\n-\n-console.log(Leaflet);\n import Leaflet from \"leaflet\"; // import everything from leaflet\n import \"leaflet/dist/leaflet.css\"; // import leaflet css\n \n+console.log(Leaflet);\n const WBS = [52.457131, 13.54007]; // WBS coordinates\n const map = Leaflet.map(\"map\").setView(WBS, 13); // create a map object with a center and zoom level\n const markerIcon = Leaflet.icon({\n   iconUrl: \"https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png\",\n"
+                },
+                {
+                    "date": 1752668798817,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import Leaflet from \"leaflet\"; // import everything from leaflet\n import \"leaflet/dist/leaflet.css\"; // import leaflet css\n \n console.log(Leaflet);\n-const WBS = [52.457131, 13.54007]; // WBS coordinates\n+const WBS = [52.066, 10.6]; // WBS coordinates\n const map = Leaflet.map(\"map\").setView(WBS, 13); // create a map object with a center and zoom level\n const markerIcon = Leaflet.icon({\n   iconUrl: \"https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png\",\n   iconAnchor: [10, 20]\n"
+                },
+                {
+                    "date": 1752668873115,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import Leaflet from \"leaflet\"; // import everything from leaflet\n import \"leaflet/dist/leaflet.css\"; // import leaflet css\n \n console.log(Leaflet);\n-const WBS = [52.066, 10.6]; // WBS coordinates\n+const WBS = [52.066, 10.6]; // WBS coordinates (Breitengrad, Längengrad  for Achim)\n const map = Leaflet.map(\"map\").setView(WBS, 13); // create a map object with a center and zoom level\n const markerIcon = Leaflet.icon({\n   iconUrl: \"https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png\",\n   iconAnchor: [10, 20]\n"
+                },
+                {
+                    "date": 1752669042233,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,11 @@\n const markerIcon = Leaflet.icon({\n   iconUrl: \"https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png\",\n   iconAnchor: [10, 20]\n }); // There was an issue with the default marker icon, so we create a new one\n-Leaflet.marker(WBS, { icon: markerIcon }).addTo(map); // add a marker to the map at the WBS coordinates\n+Leaflet.marker(WBS, { icon: markerIcon })\n+  .bindPopup(\"Achim\")\n+  .addTo(map); // add a marker to the map at the WBS coordinates\n \n Leaflet.tileLayer(\"https://tile.openstreetmap.org/{z}/{x}/{y}.png\", {\n   maxZoom: 19,\n   attribution: '&copy; <a href=\"https://google.com\" target=\"_blank\">Google</a>'\n"
+                },
+                {
+                    "date": 1752669065526,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n   iconUrl: \"https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png\",\n   iconAnchor: [10, 20]\n }); // There was an issue with the default marker icon, so we create a new one\n Leaflet.marker(WBS, { icon: markerIcon })\n-  .bindPopup(\"Achim\")\n+  .bindPopup(\"My City Achim\")\n   .addTo(map); // add a marker to the map at the WBS coordinates\n \n Leaflet.tileLayer(\"https://tile.openstreetmap.org/{z}/{x}/{y}.png\", {\n   maxZoom: 19,\n"
+                },
+                {
+                    "date": 1752669275500,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n import Leaflet from \"leaflet\"; // import everything from leaflet\n import \"leaflet/dist/leaflet.css\"; // import leaflet css\n \n console.log(Leaflet);\n-const WBS = [52.066, 10.6]; // WBS coordinates (Breitengrad, Längengrad  for Achim)\n+\n+// find your coordinates(gps coordinates= wbs) here: https://www.latlong.net/place/Achim\n+const WBS = [53.015120, 9.077833]; // WBS coordinates (Breitengrad, Längengrad  for Achim)\n const map = Leaflet.map(\"map\").setView(WBS, 13); // create a map object with a center and zoom level\n const markerIcon = Leaflet.icon({\n   iconUrl: \"https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png\",\n   iconAnchor: [10, 20]\n"
+                },
+                {
+                    "date": 1752669306431,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,16 +3,16 @@\n \n console.log(Leaflet);\n \n // find your coordinates(gps coordinates= wbs) here: https://www.latlong.net/place/Achim\n-const WBS = [53.015120, 9.077833]; // WBS coordinates (Breitengrad, Längengrad  for Achim)\n+const WBS = [53.01512, 9.077833]; // WBS coordinates (Breitengrad, Längengrad  for Achim)\n const map = Leaflet.map(\"map\").setView(WBS, 13); // create a map object with a center and zoom level\n const markerIcon = Leaflet.icon({\n   iconUrl: \"https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png\",\n   iconAnchor: [10, 20]\n }); // There was an issue with the default marker icon, so we create a new one\n Leaflet.marker(WBS, { icon: markerIcon })\n-  .bindPopup(\"My City Achim\")\n+  .bindPopup(\"My home is here!\")\n   .addTo(map); // add a marker to the map at the WBS coordinates\n \n Leaflet.tileLayer(\"https://tile.openstreetmap.org/{z}/{x}/{y}.png\", {\n   maxZoom: 19,\n"
+                },
+                {
+                    "date": 1752669592655,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n const WBS = [53.01512, 9.077833]; // WBS coordinates (Breitengrad, Längengrad  for Achim)\n const map = Leaflet.map(\"map\").setView(WBS, 13); // create a map object with a center and zoom level\n const markerIcon = Leaflet.icon({\n   iconUrl: \"https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png\",\n-  iconAnchor: [10, 20]\n+  iconAnchor: [20, 20]\n }); // There was an issue with the default marker icon, so we create a new one\n Leaflet.marker(WBS, { icon: markerIcon })\n   .bindPopup(\"My home is here!\")\n   .addTo(map); // add a marker to the map at the WBS coordinates\n"
+                },
+                {
+                    "date": 1752669601235,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n const WBS = [53.01512, 9.077833]; // WBS coordinates (Breitengrad, Längengrad  for Achim)\n const map = Leaflet.map(\"map\").setView(WBS, 13); // create a map object with a center and zoom level\n const markerIcon = Leaflet.icon({\n   iconUrl: \"https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png\",\n-  iconAnchor: [20, 20]\n+  iconAnchor: [10, 20]\n }); // There was an issue with the default marker icon, so we create a new one\n Leaflet.marker(WBS, { icon: markerIcon })\n   .bindPopup(\"My home is here!\")\n   .addTo(map); // add a marker to the map at the WBS coordinates\n"
+                },
+                {
+                    "date": 1752669790486,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,14 @@\n \n console.log(Leaflet);\n \n // find your coordinates(gps coordinates= wbs) here: https://www.latlong.net/place/Achim\n-const WBS = [53.01512, 9.077833]; // WBS coordinates (Breitengrad, Längengrad  for Achim)\n-const map = Leaflet.map(\"map\").setView(WBS, 13); // create a map object with a center and zoom level\n+// create WBS coordinates (Breitengrad, Längengrad  for Achim)\n+const WBS = [53.01512, 9.077833];\n+\n+// create a map object with a center and zoom level\n+const map = Leaflet.map(\"map\").setView(WBS, 13);\n+\n const markerIcon = Leaflet.icon({\n   iconUrl: \"https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png\",\n   iconAnchor: [10, 20]\n }); // There was an issue with the default marker icon, so we create a new one\n"
+                },
+                {
+                    "date": 1752669986065,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,5 +20,5 @@\n \n Leaflet.tileLayer(\"https://tile.openstreetmap.org/{z}/{x}/{y}.png\", {\n   maxZoom: 19,\n   attribution: '&copy; <a href=\"https://google.com\" target=\"_blank\">Google</a>'\n-}).addTo(map); // add a tile layer to the map, the\n\\ No newline at end of file\n+}).addTo(map); // add a tile layer to the map, the tiles are those images that make up the map\n"
+                },
+                {
+                    "date": 1752671265561,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,33 @@\n // find your coordinates(gps coordinates= wbs) here: https://www.latlong.net/place/Achim\n // create WBS coordinates (Breitengrad, Längengrad  for Achim)\n const WBS = [53.01512, 9.077833];\n \n+\n+const myLocations = [\n+  {name: 'Achim', location: [53.01512, 9.077833], description: 'My favourite location'},\n+  {\n+    name: 'WBS CODING SCHOOL',\n+    location: [52.457131, 13.54007],\n+    description: 'The best coding school in the world'\n+  },\n+  {\n+    name: 'Alexanderplatz',\n+    location: [52.521918, 13.413215],\n+    description: 'The most famous square in Berlin'\n+  },\n+  {\n+    name: 'Brandenburg Gate',\n+    location: [52.516275, 13.377704],\n+    description: 'The most famous gate in Berlin'\n+  },\n+  {\n+    name: 'Berlin Wall',\n+    location: [52.507541, 13.39032],\n+    description: 'The most famous wall in Berlin'\n+  }\n+];\n+\n // create a map object with a center and zoom level\n const map = Leaflet.map(\"map\").setView(WBS, 13);\n \n const markerIcon = Leaflet.icon({\n"
+                }
+            ],
+            "date": 1752668203908,
+            "name": "Commit-0",
+            "content": "import * as Leaflet from \"leaflet\";\n\nconsole.log(Leaflet);\n"
+        }
+    ]
+}

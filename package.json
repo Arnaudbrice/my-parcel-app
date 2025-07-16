@@ -1,0 +1,20 @@
+{
+  "name": "my-parcel-app",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "Brice Arnaud Habenicht",
+  "type": "commonjs",
+  "source": "./src/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel ./src/index.html",
+    "build": "parcel build ./src/index.html"
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.1.11",
+    "leaflet": "^1.9.4",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.11"
+  }
+}

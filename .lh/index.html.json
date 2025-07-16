@@ -1,0 +1,22 @@
+{
+    "sourceFile": "index.html",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1752669867294,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1752670064206,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,13 @@\n+<!DOCTYPE html>\n+<html lang=\"en\">\n+  <head>\n+    <meta charset=\"utf-8\" />\n+    <title>My First Parcel App</title>\n+    <link rel=\"stylesheet\" href=\"src/styles.css\" />\n+    <script type=\"module\" src=\"src/app.js\"></script>\n+  </head>\n+  <body class=\"container mx-auto bg-slate-300\">\n+    <h1 class=\"text-2xl text-center\">My favourite locations</h1>\n+    <div id=\"map\" class=\"h-[80vh]\"></div>\n+  </body>\n+</html>\n"
+                }
+            ],
+            "date": 1752669867294,
+            "name": "Commit-0",
+            "content": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <title>My First Parcel App</title>\n    <link rel=\"stylesheet\" href=\"src/styles.css\" />\n    <script type=\"module\" src=\"src/app.js\"></script>\n  </head>\n  <body class=\"container mx-auto bg-slate-300\">\n    <h1 class=\"text-2xl text-center\">My favourite locations</h1>\n    <div id=\"map\" class=\"h-[50vh]\"></div>\n  </body>\n</html>\n"
+        }
+    ]
+}

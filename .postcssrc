@@ -1,5 +1,6 @@
+// .postcssrc
 {
-  plugins: {
+  "plugins": {
     "@tailwindcss/postcss": {}
   }
-};
+}

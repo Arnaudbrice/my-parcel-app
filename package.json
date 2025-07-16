@@ -4,12 +4,10 @@
   "description": "",
   "license": "ISC",
   "author": "Brice Arnaud Habenicht",
-  "type": "commonjs",
-  "source": "./src/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "parcel ./src/index.html",
-    "build": "parcel build ./src/index.html"
+    "dev": "parcel  src/index.html",
+    "build": "parcel build src/index.html"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.11",

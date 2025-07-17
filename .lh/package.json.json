@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 10,
+            "activePatchIndex": 11,
             "patches": [
                 {
                     "date": 1752668174427,
@@ -48,6 +48,10 @@
                 {
                     "date": 1752691365285,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,10 +5,10 @@\n   \"license\": \"ISC\",\n   \"author\": \"Brice Arnaud Habenicht\",\n   \"scripts\": {\n     \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\",\n-    \"dev\": \"parcel  index.html\",\n-    \"build\": \"parcel build index.html\"\n+    \"dev\": \"parcel  src/index.html\",\n+    \"build\": \"parcel build src/index.html\"\n   },\n   \"dependencies\": {\n     \"@tailwindcss/postcss\": \"^4.1.11\",\n     \"leaflet\": \"^1.9.4\",\n"
+                },
+                {
+                    "date": 1752737450122,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,10 +9,12 @@\n     \"dev\": \"parcel  src/index.html\",\n     \"build\": \"parcel build src/index.html\"\n   },\n   \"dependencies\": {\n+    \"leaflet\": \"^1.9.4\",\n+    \"postcss\": \"^8.5.6\"\n+  },\n+  \"devDependencies\": {\n     \"@tailwindcss/postcss\": \"^4.1.11\",\n-    \"leaflet\": \"^1.9.4\",\n-    \"postcss\": \"^8.5.6\",\n     \"tailwindcss\": \"^4.1.11\"\n   }\n }\n"
                 }
             ],
             "date": 1752668174427,

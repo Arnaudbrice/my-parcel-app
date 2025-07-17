@@ -10,9 +10,11 @@
     "build": "parcel build src/index.html"
   },
   "dependencies": {
-    "@tailwindcss/postcss": "^4.1.11",
     "leaflet": "^1.9.4",
-    "postcss": "^8.5.6",
+    "postcss": "^8.5.6"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.11",
     "tailwindcss": "^4.1.11"
   }
 }
